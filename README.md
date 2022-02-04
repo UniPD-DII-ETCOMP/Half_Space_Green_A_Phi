@@ -1,6 +1,7 @@
 
 # HALF SPACE GREEN FUNCTION
 
+
 This directory contains a simplified matlab and fortran version of the STRATA library https://github.com/modelics/strata for the computation of the Green's function of an Half space background. 
 It can be used for research and academic purposes. 
 In this MATLAB/Fortran version only the half space case (two semi-infinite layers) is considered. Moreover, only the "integrate" technique is implemented and we only focus on the components of the dyadic K(A), and the scalar term K(φ), as defined in formulation-C of [1]
