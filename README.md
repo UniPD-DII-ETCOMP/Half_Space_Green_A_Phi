@@ -1,14 +1,11 @@
 
 # HALF SPACE GREEN FUNCTION
--------------------------------------------------------------------
-This directory contains a simplified matlab and fortran version of the STRATA library https://github.com/modelics/strata for the computation of the Green's function of an Half space background. 
-It can be used for research and academic purposes. 
-In this MATLAB/Fortran version only the half space case (two semi-infinite layers) is considered. Moreover, only the "integrate" technique is implemented and we only focus on the components of the dyadic K(A), and the scalar term K(φ), as defined in formulation-C of [1]
+This directory contains a simplified matlab and fortran version of the STRATA library https://github.com/modelics/strata for the computation of the Green's function of an Half space background. It can be used for research and academic purposes. In this MATLAB/Fortran version only the half space case (two semi-infinite layers) is considered. Moreover, only the "integrate" technique is implemented and we only focus on the components of the dyadic K(A), and the scalar term K(φ), as defined in formulation-C of [1]
 The original C++ Strata library, instead, also implements the multi-layer version of the Green's functions and other methods (DCIM, quasistatic) and features are provided. See https://github.com/modelics/strata for more details. 
+
 -------------------------------------------------------------------
 
 # References
--------------------------------------------------------------------
 @INPROCEEDINGS{strata,
 	author={S. {Sharma} and P. {Triverio}},
 	booktitle={2021 {IEEE} International Symposium on Antennas and Propagation and {USNC-URSI} Radio Science Meeting},
@@ -27,11 +24,9 @@ The original C++ Strata library, instead, also implements the multi-layer versio
 
 [5] M. I. Aksun, "A Robust Approach for the derivation of closed-form Green's functions," IEEE Trans. Microw. Theory Tech., vol. 44, pp. 651–658, May 1996.	
 
-
 -------------------------------------------------------------------
 
 # Note
-------------------------------------------------------------------- 
 The Matlab functions are not optimized. 
 Small discrepancies between Matlab and Fortran functions can be obtained due to the numeric integrations. 
 
@@ -48,6 +43,5 @@ This toolbox contains parts or modifications of the following codes:
 -------------------------------------------------------------------
 
 # Contacts
--------------------------------------------------------------------
 Riccardo Torchio (riccardo.torchio@unipd.it)
 Francesco Lucchini (francesco.lucchini@igi.cnr.it)
