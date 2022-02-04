@@ -1,0 +1,160 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>besselzero</title><meta name="generator" content="MATLAB 9.4"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2018-05-18"><meta name="DC.source" content="besselzeroDoc.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>besselzero</h1><!--introduction--><p>besselzero calculates the zeros of Bessel function of the first and second kind</p><pre class="language-matlab">x = besselzero(n)
+x = besselzero(n, k)
+x = besselzero(n, k, kind)
+</pre><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Inputs</a></li><li><a href="#2">Outputs</a></li><li><a href="#3">Description</a></li><li><a href="#4">Algorithm</a></li><li><a href="#6">Example</a></li><li><a href="#7">Authorship</a></li><li><a href="#8">Change Log</a></li></ul></div><h2 id="1">Inputs</h2><div><ul><li><b>n</b> - The order of the bessel function. n can be a scalar, vector, or       matrix.  n can be positive, negative, fractional, or any       combinaiton. abs(n) must be less than or equal to       146222.16674537213 and 370030.762407380 for first and second kind       respectively.</li><li><b>k</b> - The number of postive zeros to calculate.  When k is not supplied,       k = 5 is the default. k must be a scalar.</li><li><b>kind</b> - kind is either 1 or 2. When kind is not supplied, default is          kind = 1.</li></ul></div><h2 id="2">Outputs</h2><div><ul><li><b>x</b> - The calculated zeros.  size(x) = [size(n) k].</li></ul></div><h2 id="3">Description</h2><p>besselzero calculates the first k positive zeros of nth order bessel function of the first or second kind.  Note, that x=0 is not included as the first zero.</p><h2 id="4">Algorithm</h2><p>the first three roots of any order bessel can be approximated by a simple equations.  These equations were generated using a least squares fit of the roots from orders of n=0:10000. The approximation is used to start the iteration of Halley's method.  The 4th and higher roots can be approximated by understanding the roots are regularly spaced for a given order.  Once the 2nd and 3rd roots are found, the spacing can be approximated by the distance between the 2nd and 3rd root.  Then again Halley's method can be applied to precisely locate the root.</p><p>Because the algorithm depends on good guesses of the first three zeros, if the guess is to far away then Halley's method will converge to the wrong zero which will subsequently cause any other zero to be incorrectly located. Therefore, a limit is put on abs(n) of 146222.16674537213 and 370030.762407380 for first and second kind respectively.  If n is specified above these limits, then an error is thrown.</p><h2 id="6">Example</h2><pre class="codeinput">n = (1:2)';
+k = 10;
+kind = 1;
+z = besselzero(n, k, kind);
+x = linspace(0, z(end), 1000);
+y = nan(2, length(x));
+y(1,:) = besselj(n(1), x);
+y(2,:) = besselj(n(2), x);
+nz = nan(size(z));
+nz(1,:) = besselj(n(1), z(1,:));
+nz(2,:) = besselj(n(2), z(2,:));
+plot(x, y, z, nz,<span class="string">'kx'</span>)
+</pre><img vspace="5" hspace="5" src="besselzeroDoc_01.png" alt=""> <h2 id="7">Authorship</h2><p>Originally written by Written by: Greg von Winckel - 01/25/05 Contact: gregvw(at)chtm(dot)unm(dot)edu</p><p>Modified, Improved, and Documented by Jason Nicholson 2014-Nov-06</p><h2 id="8">Change Log</h2><div><ul><li>Original release. 2005-Jan-25, Greg von Winckel.</li><li>Updated Documentation and commented algorithm. Fixed bug in finding the   the first zero of the bessel function of the second kind. Improved speed by   factor of 20. 2014-Nov-06, Jason Nicholson.</li></ul></div><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2018a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% besselzero
+% besselzero calculates the zeros of Bessel function of the first and second kind 
+%
+%   x = besselzero(n)
+%   x = besselzero(n, k)
+%   x = besselzero(n, k, kind)
+%
+%% Inputs
+% * *n* - The order of the bessel function. n can be a scalar, vector, or
+%       matrix.  n can be positive, negative, fractional, or any
+%       combinaiton. abs(n) must be less than or equal to
+%       146222.16674537213 and 370030.762407380 for first and second kind
+%       respectively. 
+% * *k* - The number of postive zeros to calculate.  When k is not supplied,
+%       k = 5 is the default. k must be a scalar.
+% * *kind* - kind is either 1 or 2. When kind is not supplied, default is
+%          kind = 1.
+%
+%% Outputs
+% * *x* - The calculated zeros.  size(x) = [size(n) k].
+% 
+%% Description
+% besselzero calculates the first k positive zeros of nth order bessel
+% function of the first or second kind.  Note, that x=0 is not included as
+% the first zero.
+%
+%% Algorithm
+% the first three roots of any order bessel can be approximated by a simple
+% equations.  These equations were generated using a least squares fit of
+% the roots from orders of n=0:10000. The approximation is used to start
+% the iteration of Halley's method.  The 4th and higher roots can be
+% approximated by understanding the roots are regularly spaced for a given
+% order.  Once the 2nd and 3rd roots are found, the spacing can be
+% approximated by the distance between the 2nd and 3rd root.  Then again
+% Halley's method can be applied to precisely locate the root.
+%%
+% Because the algorithm depends on good guesses of the first three zeros,
+% if the guess is to far away then Halley's method will converge to the
+% wrong zero which will subsequently cause any other zero to be incorrectly
+% located. Therefore, a limit is put on abs(n) of 146222.16674537213 and
+% 370030.762407380 for first and second kind respectively.  If n is
+% specified above these limits, then an error is thrown.
+%
+%% Example
+n = (1:2)';
+k = 10;
+kind = 1;
+z = besselzero(n, k, kind);
+x = linspace(0, z(end), 1000);
+y = nan(2, length(x));
+y(1,:) = besselj(n(1), x);
+y(2,:) = besselj(n(2), x);
+nz = nan(size(z));
+nz(1,:) = besselj(n(1), z(1,:));
+nz(2,:) = besselj(n(2), z(2,:));
+plot(x, y, z, nz,'kx')
+
+%% Authorship
+% Originally written by 
+% Written by: Greg von Winckel - 01/25/05
+% Contact: gregvw(at)chtm(dot)unm(dot)edu
+%
+% Modified, Improved, and Documented by 
+% Jason Nicholson 2014-Nov-06
+
+
+%% Change Log
+% * Original release. 2005-Jan-25, Greg von Winckel.
+% * Updated Documentation and commented algorithm. Fixed bug in finding the
+%   the first zero of the bessel function of the second kind. Improved speed by 
+%   factor of 20. 2014-Nov-06, Jason Nicholson.
+%
+
+##### SOURCE END #####
+--></body></html>
