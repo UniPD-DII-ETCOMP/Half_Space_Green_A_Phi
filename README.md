@@ -6,23 +6,17 @@ The original C++ Strata library, instead, also implements the multi-layer versio
 -------------------------------------------------------------------
 
 # References
-@INPROCEEDINGS{strata,
-	author={S. {Sharma} and P. {Triverio}},
-	booktitle={2021 {IEEE} International Symposium on Antennas and Propagation and {USNC-URSI} Radio Science Meeting},
-	title={Strata: An Open-Source {C++} Library for Computing {Green's} Functions for Layered Media},
-	year={2021},
-	month={Dec.},
-	address = {Singapore}}
+[1] S. Sharma and P. Triverio, Strata: An Open-Source C++ Library for Computing Green's Functions for Layered Media, 2021 IEEE International Symposium on Antennas and Propagation and USNC-URSI Radio Science Meeting, 2021, Singapore
 	
-[1] K. A. Michalski and D. Zheng, "Electromagnetic scattering and radiation by surfaces of arbitrary shape in layered media. I. theory," IEEE Trans. Antennas Propag., vol. 38, no. 3, pp. 335–344, Mar. 1990.
+[2] K. A. Michalski and D. Zheng, "Electromagnetic scattering and radiation by surfaces of arbitrary shape in layered media. I. theory," IEEE Trans. Antennas Propag., vol. 38, no. 3, pp. 335–344, Mar. 1990.
 
-[2] K. A. Michalski and J. R. Mosig, "Multilayered media Green's functions in integral equation formulations," IEEE Trans. Antennas Propag., vol. 45, no. 3, pp. 508–519, Mar. 1997.
+[3] K. A. Michalski and J. R. Mosig, "Multilayered media Green's functions in integral equation formulations," IEEE Trans. Antennas Propag., vol. 45, no. 3, pp. 508–519, Mar. 1997.
 
-[3] E. Simsek, Q. H. Liu, and B. Wei, "Singularity Subtraction for Evaluation of Green's Functions for Multilayer Media," IEEE Trans. Microw. Theory Tech., vol. 54, pp. 216–225, Jan 2006.
+[4] E. Simsek, Q. H. Liu, and B. Wei, "Singularity Subtraction for Evaluation of Green's Functions for Multilayer Media," IEEE Trans. Microw. Theory Tech., vol. 54, pp. 216–225, Jan 2006.
 
-[4] K. A. Michalski and J. R. Mosig, "Efficient computation of Sommerfeld integral tails - methods and algorithms," J. Electromagn. Waves Appl., vol. 30, no. 3, pp. 281–317, 2016.
+[5] K. A. Michalski and J. R. Mosig, "Efficient computation of Sommerfeld integral tails - methods and algorithms," J. Electromagn. Waves Appl., vol. 30, no. 3, pp. 281–317, 2016.
 
-[5] M. I. Aksun, "A Robust Approach for the derivation of closed-form Green's functions," IEEE Trans. Microw. Theory Tech., vol. 44, pp. 651–658, May 1996.	
+[6] M. I. Aksun, "A Robust Approach for the derivation of closed-form Green's functions," IEEE Trans. Microw. Theory Tech., vol. 44, pp. 651–658, May 1996.	
 
 -------------------------------------------------------------------
 
