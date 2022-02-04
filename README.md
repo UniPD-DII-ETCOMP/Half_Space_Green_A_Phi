@@ -1,7 +1,6 @@
 
 # HALF SPACE GREEN FUNCTION
-
-
+-------------------------------------------------------------------
 This directory contains a simplified matlab and fortran version of the STRATA library https://github.com/modelics/strata for the computation of the Green's function of an Half space background. 
 It can be used for research and academic purposes. 
 In this MATLAB/Fortran version only the half space case (two semi-infinite layers) is considered. Moreover, only the "integrate" technique is implemented and we only focus on the components of the dyadic K(A), and the scalar term K(φ), as defined in formulation-C of [1]
@@ -9,7 +8,7 @@ The original C++ Strata library, instead, also implements the multi-layer versio
 -------------------------------------------------------------------
 
 # References
-
+-------------------------------------------------------------------
 @INPROCEEDINGS{strata,
 	author={S. {Sharma} and P. {Triverio}},
 	booktitle={2021 {IEEE} International Symposium on Antennas and Propagation and {USNC-URSI} Radio Science Meeting},
@@ -32,11 +31,23 @@ The original C++ Strata library, instead, also implements the multi-layer versio
 -------------------------------------------------------------------
 
 # Note
- 
+------------------------------------------------------------------- 
 The Matlab functions are not optimized. 
 Small discrepancies between Matlab and Fortran functions can be obtained due to the numeric integrations. 
 
-Contacts
------------------------
+This toolbox contains parts or modifications of the following codes:
+
+[1] STRATA, https://github.com/modelics/strata (MATLAB & FRTRAN porting)
+
+[2] Jason Nicholson (2022). Bessel Zero Solver (https://www.mathworks.com/matlabcentral/fileexchange/48403-bessel-zero-solver), MATLAB Central File Exchange. Retrieved February 4, 2022.
+
+[3] TOMS644, Bessel Functions of Complex Argument and Nonnegative Real Order. https://people.sc.fsu.edu/~jburkardt/f77_src/toms644/toms644.html
+
+[4] quadpack, http://www.netlib.org/quadpack/
+
+-------------------------------------------------------------------
+
+# Contacts
+-------------------------------------------------------------------
 Riccardo Torchio (riccardo.torchio@unipd.it)
 Francesco Lucchini (francesco.lucchini@igi.cnr.it)
