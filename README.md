@@ -23,10 +23,11 @@ The original C++ Strata library, instead, also implements the multi-layer versio
 # Note
 The Matlab functions are not optimized. 
 Small discrepancies between Matlab and Fortran functions can be obtained due to the numeric integrations. 
+If you spotted some bugs, please contact us. 
 
 This toolbox contains parts or modifications of the following codes:
 
-[1] STRATA, https://github.com/modelics/strata (MATLAB & FRTRAN porting)
+[1] STRATA, https://github.com/modelics/strata (MATLAB & FORTRAN porting)
 
 [2] Jason Nicholson (2022). Bessel Zero Solver (https://www.mathworks.com/matlabcentral/fileexchange/48403-bessel-zero-solver), MATLAB Central File Exchange. Retrieved February 4, 2022.
 
